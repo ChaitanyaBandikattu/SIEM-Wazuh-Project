@@ -42,21 +42,7 @@ The system aggregates logs from multiple sources such as servers and endpoints, 
 
 ### ⚙️ Implementation
 
-#### 📊 Dashboard View
-![Dashboard](screenshots/implementation/)
-
-#### 📄 Log Monitoring
-![Logs](screenshots/implementation/)
-
----
-
 ### 📊 Results
-
-#### 🚨 Alert Detection
-![Alert](screenshots/results/)
-
-#### 🔍 Alert Analysis
-![Alert Details](screenshots/results/)
 
 ---
 
