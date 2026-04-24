@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial;
+    background: #f5f7fa;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #0D47A1;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* SIDEBAR BUTTONS */
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* CENTER AREA */
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENT */
+.content {
+    text-align: center;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fadeSlide 1.5s ease-in-out;
+}
+
+/* IMAGE (SLIGHTLY BIGGER) */
+.top-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+    filter: drop-shadow(0 0 10px rgba(13,71,161,0.5));
+}
+
+/* TITLE */
+.content h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0D47A1;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* SUBTITLE */
+.content p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0D47A1;
+    margin-top: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ================= LOGIN PAGE ================= */
+
+.login-body {
+    background: #0D47A1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CENTER LOGIN */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOGIN BOX (MATCH DASHBOARD STYLE) */
+.login-box {
+    background: white;
+    padding: 40px;
+    width: 320px;
+    border-radius: 10px;
+    text-align: center;
+
+    /* same shadow like dashboard theme */
+    box-shadow: 0 0 20px rgba(13,71,161,0.2);
+
+    animation: fadeSlide 1.5s ease-in-out;
+}
+
+/* TITLE */
+.login-box h1 {
+    color: #0D47A1;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #0D47A1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #08306b;
+}
+
+/* ERROR */
+.error {
+    color: red;
+    margin-top: 10px;
+}
