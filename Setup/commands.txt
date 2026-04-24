@@ -1,0 +1,68 @@
+# =========================
+# SIEM SERVER (WAZUH)
+# =========================
+
+# Check IP Address
+ip a
+
+# Restart Wazuh Services
+sudo systemctl restart wazuh-indexer
+sudo systemctl restart wazuh-manager
+sudo systemctl restart wazuh-dashboard
+
+# Check Service Status
+sudo systemctl status wazuh-indexer
+sudo systemctl status wazuh-manager
+sudo systemctl status wazuh-dashboard
+
+
+# =========================
+# CLIENT MACHINE (AGENT)
+# =========================
+
+# Check connectivity to SIEM server
+ping 192.168.56.101
+
+# Start Wazuh Agent
+sudo systemctl start wazuh-agent
+
+# Check Agent Status
+sudo systemctl status wazuh-agent
+
+
+# =========================
+# WEB APPLICATION (FLASK)
+# =========================
+
+# Run Application (in VS Code or terminal)
+python app.py
+
+# Access URLs:
+# Wazuh Dashboard: https://192.168.56.101:5601/
+# Web Application: http://127.0.0.1:5000/
+
+
+# =========================
+# ATTACK SIMULATION
+# =========================
+
+# Method 1: Login Attack
+# Enter wrong password multiple times, then correct password
+
+# Method 2: Sudo Attack Simulation
+sudo -k
+sudo ls
+# Enter incorrect password when prompted
+
+
+# =========================
+# RESULT VERIFICATION
+# =========================
+
+# Go to Wazuh Dashboard
+# Navigate to: Security Events
+
+# Observe:
+# - Failed login attempts
+# - Suspicious activity alerts
+# - Log entries generated in real-time
